@@ -1,0 +1,101 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir Next Reg";
+  position: relative;
+}
+
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../fonts/AvenirNextCyr-Bold.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Bold.woff") format("woff"), url("../fonts/AvenirNextCyr-Bold.eot") format("eot"), url("../fonts/AvenirNextCyr-Bold.ttf") format("ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Avenir Next Reg";
+  src: url("../fonts/AvenirNextCyr-Regular.woff2") format("woff2"), url("../fonts/AvenirNextCyr-Regular.woff") format("woff"), url("../fonts/AvenirNextCyr-Regular.eot") format("eot"), url("../fonts/AvenirNextCyr-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "International-Regular";
+  src: url("../fonts/International-Regular.ttf.woff") format("woff"), url("../fonts/International-Regular.ttf.svg#International-Regular") format("svg"), url("../fonts/International-Regular.ttf.eot"), url("../fonts/International-Regular.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  line-height: 24px;
+  z-index: 1;
+}
+
+.head_banner {
+  background: #010101 url("../media/head_banner.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.head_banner p {
+  width: 100%;
+  font-family: "International-Regular";
+  font-size: 3rem;
+  color: azure;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.head_banner p span {
+  font-family: "Avenir Next Bold";
+  text-transform: none;
+  font-size: 2rem;
+}
+
+.media {
+  width: 100%;
+  background-color: #010101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.media article {
+  max-width: 80%;
+  margin: 5vh 0;
+}
+.media article audio {
+  display: block;
+  height: 5vh;
+}
+.media .song_title {
+  font-family: "Avenir Next Bold";
+  font-size: 1.5rem;
+  color: azure;
+  margin-top: 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
