@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+*.pug
+*.scss
+*.map
+# Editor-based HTTP Client requests
+/httpRequests/
