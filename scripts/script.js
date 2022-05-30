@@ -1947,10 +1947,8 @@ const songArr = [
     }
 ]//JSON.parse(fs.readFileSync('tracks.json', 'utf8'));
 let songIndex = Math.floor(Math.random() * songArr.length);
-console.log(songIndex);
-console.log(songArr[songIndex].title + ' - ' + songArr[songIndex].artist);
 const audioField = document.querySelector("audio");
 const titleField = document.querySelector(".song_title");
-audioField.setAttribute("src", "../media/sounds/" + songArr[songIndex].file);
+audioField.setAttribute("src", "media/sounds/" + songArr[songIndex].file);
 audioField.setAttribute("autoplay", "1");
 titleField.innerHTML = songArr[songIndex].artist + ' - ' + songArr[songIndex].title;
