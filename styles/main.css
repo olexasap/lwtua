@@ -28,48 +28,48 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline-block;
-  margin-right: 50px;
-}
-
 header {
-  position: fixed;
-  top: 0;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: azure;
   line-height: 24px;
-  z-index: 1;
+}
+
+body {
+  background-color: #010101;
+}
+
+.head_wrapper {
+  width: 100%;
+  height: 90vh;
+  position: relative;
 }
 
 .head_banner {
-  background: #010101 url("../media/head_banner.jpg");
+  background: url("../media/head_banner.jpg");
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background-position: center;
-  background-size: 50%;
+  background-size: contain;
   background-repeat: no-repeat;
   position: relative;
 }
-.head_banner p {
+
+.head_banner--naming {
   width: 100%;
   font-family: "International-Regular";
   font-size: 3rem;
   color: azure;
   text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
   text-align: center;
+  position: absolute;
+  bottom: 3vh;
 }
-.head_banner p span {
+.head_banner--naming span {
+  display: block;
   font-family: "Avenir Next Bold";
   text-transform: none;
   font-size: 2rem;
@@ -82,20 +82,25 @@ header {
   flex-direction: column;
   align-items: center;
 }
-.media article {
-  max-width: 80%;
-  margin: 5vh 0;
+
+.visualization {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  background: #010101;
+  box-shadow: inset 0 0 160px 0 #000;
+  cursor: pointer;
 }
-.media article audio {
-  display: block;
-  height: 5vh;
-}
-.media .song_title {
-  font-family: "Avenir Next Bold";
-  font-size: 1.5rem;
-  color: azure;
-  margin-top: 0;
-  text-align: center;
+
+.vz_canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: initial;
+  width: initial;
+  background: transparent;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */
