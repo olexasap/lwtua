@@ -8,7 +8,20 @@ if (xhr.status != 200) {
     songArr = JSON.parse(xhr.responseText);
 }
 let songIndex = Math.floor(Math.random() * songArr.length);
-const vizPlayer = document.getElementById("currentTrack");
-vizPlayer.setAttribute("src", "media/sounds/" + songArr[songIndex].file);
-vizPlayer.setAttribute("data-author", songArr[songIndex].artist);
-vizPlayer.setAttribute("data-title", songArr[songIndex].title);
+let wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    mediaType: 'audio',
+    mediaControls: true,
+    responsive: true,
+    waveColor: 'white',
+    progressColor: 'darkgrey'
+});
+wavesurfer.load("media/sounds/" + songArr[songIndex].file);
+document.addEventListener('DOMContentLoaded', function() {
+    let playPause = document.querySelector('#playPause');
+    playPause.addEventListener('click', function () {
+        wavesurfer.playPause();
+    });
+});
+let infoLine = document.querySelector('#trackInfo');
+infoLine.innerHTML = '"' + songArr[songIndex].title + '" by ' + songArr[songIndex].artist;
