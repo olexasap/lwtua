@@ -100,6 +100,11 @@ body {
   color: azure;
   text-align: center;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #trackInfo {
@@ -109,6 +114,10 @@ body {
   font-size: 2rem;
   color: azure;
   text-align: center;
+}
+#trackInfo span {
+  color: dimgrey;
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */
