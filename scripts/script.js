@@ -49,6 +49,7 @@ function trackPlay(file) {
         let playPause = document.querySelector('#playPause');
         playPause.addEventListener('click', function () {
             wavesurfer.playPause();
+            playPause.classList.toggle("active");
         });
     });
 }

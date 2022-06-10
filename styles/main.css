@@ -37,6 +37,9 @@ header {
   color: azure;
   line-height: 24px;
 }
+header p {
+  animation: tracking 5s linear both infinite;
+}
 
 body {
   background-color: #010101;
@@ -78,10 +81,6 @@ body {
 .media {
   width: 100%;
   background-color: #010101;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .visualization {
@@ -94,8 +93,10 @@ body {
 }
 
 #playPause {
-  width: 100%;
+  display: inline-block;
   margin-top: 5vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
   font-size: 3rem;
   color: azure;
   text-align: center;
@@ -118,6 +119,47 @@ body {
 #trackInfo span {
   color: dimgrey;
   display: block;
+}
+
+#playPause.active {
+  animation: jello 2s ease 0s 1 normal none running;
+}
+
+@keyframes jello {
+  0% {
+    transform: scale3d(1, 1, 1) translateX(-50%);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1) translateX(-50%);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1) translateX(-50%);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1) translateX(-50%);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1) translateX(-50%);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1) translateX(-50%);
+  }
+  100% {
+    transform: scale3d(1, 1, 1) translateX(-50%);
+  }
+}
+@keyframes tracking {
+  0% {
+    letter-spacing: 0.6em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
